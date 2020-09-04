@@ -1,5 +1,6 @@
 package com.example.androidbestpractice.base
 
+import com.example.androidbestpractice.di.databaseManager.AppDatabase
 import com.example.androidbestpractice.di.networkManager.ErrorBody
 import com.example.androidbestpractice.di.networkManager.Resource
 import com.example.androidbestpractice.di.networkManager.RetrofitService
@@ -9,6 +10,7 @@ import retrofit2.HttpException
 
 abstract class BaseRepository {
     protected val retrofitService by inject(RetrofitService::class.java)
+    protected val appDatabase by inject(AppDatabase::class.java)
 
     protected fun <T> okHandler(data: T): Resource<T> {
         return Resource.success(data = data)
