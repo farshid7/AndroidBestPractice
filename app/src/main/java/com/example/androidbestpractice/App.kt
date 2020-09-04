@@ -2,6 +2,7 @@ package com.example.androidbestpractice
 
 import android.app.Application
 import com.example.androidbestpractice.di.AppModule.appModule
+import com.example.androidbestpractice.di.RepositoryModule.repositoryModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -14,6 +15,7 @@ class App : Application() {
             androidLogger(Level.ERROR)
             androidContext(this@App)
             modules(appModule)
+            modules(repositoryModule)
         }
     }
 }

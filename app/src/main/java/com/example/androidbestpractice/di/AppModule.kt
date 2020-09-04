@@ -7,7 +7,7 @@ import org.koin.dsl.module
 object AppModule {
     val appModule = module {
         single<RetrofitService> {
-            RetrofitBuilderImpl().makeRetrofitService("https://test.m1.app.zabanshenas.com")
+            RetrofitBuilderImpl().makeRetrofitService("https://api.themoviedb.org")
                 .create(RetrofitService::class.java)
         }
 
