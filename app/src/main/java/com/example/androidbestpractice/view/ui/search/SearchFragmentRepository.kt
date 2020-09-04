@@ -1,4 +1,4 @@
-package com.example.androidbestpractice.ui.search
+package com.example.androidbestpractice.view.ui.search
 
 import androidx.lifecycle.MutableLiveData
 import com.example.androidbestpractice.base.BaseRepository
@@ -8,11 +8,11 @@ import com.example.androidbestpractice.entity.DataResponse
 class SearchFragmentRepository : BaseRepository() {
 
     suspend fun search(query: String, liveData: MutableLiveData<Resource<DataResponse>>) {
-        liveData.value = Resource.loading()
+        liveData.postValue(Resource.loading())
         try {
-            liveData.value = okHandler(retrofitService.getDiscover())
+            liveData.postValue(okHandler(retrofitService.search(query)))
         } catch (exception: Exception) {
-            liveData.value = exceptionHandler(exception)
+            liveData.postValue(exceptionHandler(exception))
         }
     }
 }

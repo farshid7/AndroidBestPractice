@@ -1,4 +1,4 @@
-package com.example.androidbestpractice.ui.home
+package com.example.androidbestpractice.view.ui.home
 
 import androidx.lifecycle.liveData
 import com.example.androidbestpractice.base.BaseRepository

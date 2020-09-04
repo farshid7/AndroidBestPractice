@@ -1,7 +1,7 @@
 package com.example.androidbestpractice.di
 
-import com.example.androidbestpractice.ui.home.HomeFragmentRepository
-import com.example.androidbestpractice.ui.search.SearchFragmentRepository
+import com.example.androidbestpractice.view.ui.home.HomeFragmentRepository
+import com.example.androidbestpractice.view.ui.search.SearchFragmentRepository
 import org.koin.dsl.module
 
 object RepositoryModule {

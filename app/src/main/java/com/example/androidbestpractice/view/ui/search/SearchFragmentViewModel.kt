@@ -1,4 +1,4 @@
-package com.example.androidbestpractice.ui.search
+package com.example.androidbestpractice.view.ui.search
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -12,14 +12,14 @@ import org.koin.java.KoinJavaComponent.inject
 
 class SearchFragmentViewModel : ViewModel() {
     private val repository by inject(SearchFragmentRepository::class.java)
-    var query=""
+    var query = ""
 
     private val _searchLiveData = MutableLiveData<Resource<DataResponse>>()
     val searchLiveData: LiveData<Resource<DataResponse>> get() = _searchLiveData
 
     fun search() {
         viewModelScope.launch(Dispatchers.IO) {
-            repository.search(query,_searchLiveData)
+            repository.search(query, _searchLiveData)
         }
     }
 
