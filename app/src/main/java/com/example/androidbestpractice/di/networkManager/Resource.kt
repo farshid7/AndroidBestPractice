@@ -10,7 +10,7 @@ data class Resource<out T>(val status: Status, val data: T?, val errorBody: Erro
 
         fun <T> error(data: T?, errorBody: ErrorBody): Resource<T> =
             Resource(status = Status.ERROR, data = data, errorBody = errorBody)
-     
+
         fun <T> failed(): Resource<T> =
             Resource(status = Status.FILED, data = null, errorBody = null)
     }

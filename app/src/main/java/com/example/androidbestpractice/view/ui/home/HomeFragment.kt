@@ -24,7 +24,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 )
             )
         }
-
         viewModel.discoverLiveData.observe(viewLifecycleOwner) {
             when (it.status) {
                 Status.LOADING -> {

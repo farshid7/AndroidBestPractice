@@ -12,7 +12,7 @@ object AppModule {
             RetrofitBuilderImpl().makeRetrofitService("https://api.themoviedb.org")
                 .create(RetrofitService::class.java)
         }
-        single<AppDatabase> {
+        single {
             Room.databaseBuilder(
                 get(),
                 AppDatabase::class.java, "app_database"

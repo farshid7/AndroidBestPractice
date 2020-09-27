@@ -10,4 +10,6 @@ interface RetrofitService {
 
     @GET("/3/search/movie?api_key=f022aed657b3d6468f1ccee74b2038dd&language=en-US&page=1&include_adult=false")
     suspend fun search(@Query("query") query: String): DataResponse
+
+
 }

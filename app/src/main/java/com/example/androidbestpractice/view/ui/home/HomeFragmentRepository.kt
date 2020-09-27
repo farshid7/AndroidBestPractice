@@ -3,6 +3,7 @@ package com.example.androidbestpractice.view.ui.home
 import androidx.lifecycle.liveData
 import com.example.androidbestpractice.base.BaseRepository
 import com.example.androidbestpractice.di.networkManager.Resource
+import com.example.androidbestpractice.entity.DataResponse
 import kotlinx.coroutines.Dispatchers
 
 class HomeFragmentRepository : BaseRepository() {
@@ -12,7 +13,7 @@ class HomeFragmentRepository : BaseRepository() {
         try {
             emit(okHandler(retrofitService.getDiscover()))
         } catch (exception: Exception) {
-            emit(exceptionHandler(exception))
+            emit(exceptionHandler<DataResponse>(exception))
         }
     }
 }

@@ -16,7 +16,7 @@ class DetailFragmentRepository : BaseRepository() {
         try {
             emit(Resource.success(appDatabase.DataResultDao().isExists(id)))
         } catch (exception: Exception) {
-            emit(exceptionHandler(exception))
+            emit(exceptionHandler<Boolean>(exception))
         }
     }
 
