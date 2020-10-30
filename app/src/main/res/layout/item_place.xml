@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="placeItem"
+            type="com.example.androidbestpractice.entity.PlaceItem" />
+    </data>
+
+<LinearLayout
+    android:orientation="horizontal"
+    android:id="@+id/view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+</layout>
